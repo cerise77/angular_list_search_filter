@@ -1,0 +1,43 @@
+<div class="main">
+  <div class="top">
+      <input [(ngModel)]="query" placeholder="Name"/>
+      <input [(ngModel)]="querys" placeholder="Genre"/>
+      <input [(ngModel)]="queryO" placeholder="Premiere Year"/>
+  </div>
+
+  <div>
+    <div class="head">
+      <div (click)="nameClick($event, 'title')">Name </div>
+      <div (click)="nameClick($event, 'season')">Season</div>
+      <div (click)="nameClick($event, 'network')">Network</div>
+      <div (click)="premiereClick($event, 'premiere')">Premiere</div>
+    </div>
+
+    <div>
+      <div class="body" *ngFor="let table of tables | search:'title':query | filter:'genre':querys | filtration:'premiere':queryO">
+        <div>
+          {{table?.title}}
+          <p>
+            {{table?.genre}}
+          </p>
+        </div>
+
+        <div>
+          {{table?.season}}
+        </div>
+
+        <div>
+          {{table?.network}}
+        </div>
+
+        <div>
+          {{table?.premiere}}
+        </div>
+      </div>
+
+      <div class="descript">
+
+      </div>
+    </div>
+  </div>
+</div>
