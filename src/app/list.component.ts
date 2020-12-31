@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewChildren, ElementRef, Renderer2, AfterViewInit, HostListener, Directive} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit, HostListener, Directive} from '@angular/core';
 import { HttpService } from './http.service';
 import { EventManager } from '@angular/platform-browser';
 import {Table} from './table';
